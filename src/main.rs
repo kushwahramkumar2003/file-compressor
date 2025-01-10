@@ -41,7 +41,6 @@ fn compress_file(
     compression_level: Compression,
     show_progress: bool,
 ) -> Result<CompressionStats, CompressionError> {
-    // Validate input file
     let source_path = Path::new(source);
     if !source_path.exists() {
         return Err(CompressionError::InvalidInput(format!(
@@ -50,16 +49,13 @@ fn compress_file(
         )));
     }
 
-    // Open input file
     let input_file = File::open(source_path)?;
     let file_size = input_file.metadata()?.len();
     let mut input = BufReader::new(input_file);
 
-    // Create output file
     let output = File::create(target)?;
     let mut encoder = GzEncoder::new(output, compression_level);
 
-    // Setup progress bar
     let progress_bar = if show_progress {
         let pb = ProgressBar::new(file_size);
         pb.set_style(
@@ -73,7 +69,6 @@ fn compress_file(
         None
     };
 
-    // Perform compression
     let start = Instant::now();
 
     if let Some(pb) = &progress_bar {
