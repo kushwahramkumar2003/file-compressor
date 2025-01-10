@@ -157,7 +157,7 @@ fn main() {
             println!(
                 "{}: {}",
                 "Compressed size".bright_yellow(),
-                format!("{:.2} MB", stats.target_size as f64 / 1_048_576.0)
+                stats.target_size as f64 / 1_048_576.0
             );
             println!(
                 "{}: {:.1}%",
