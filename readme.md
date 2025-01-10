@@ -161,4 +161,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Ramkumar kushwah - [@ramkumar_9301](https://twitter.com/ramkumar_9301) - kushwahramkumar2003@gmail.com
 
-Project Link: [https://github.com/kushwahramkumar2003/compression-utility](https://github.com/yourusername/compression-utility)
+Project Link: [https://github.com/kushwahramkumar2003/file-compressor](https://github.com/yourusername/file-compressor)

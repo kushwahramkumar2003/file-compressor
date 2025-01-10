@@ -150,9 +150,9 @@ fn main() {
         Ok(stats) => {
             println!("\n{}", "Compression Summary:".bright_blue().bold());
             println!(
-                "{}: {}",
+                "{}: {:.2} MB",
                 "Source file size".bright_yellow(),
-                format!("{:.2} MB", stats.source_size as f64 / 1_048_576.0)
+                stats.source_size as f64 / 1_048_576.0
             );
             println!(
                 "{}: {}",
