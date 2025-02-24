@@ -6,6 +6,6 @@ authors = ["Ramkumar kushwah <kushwahramkumr20003@gmail.com>"]
 
 [dependencies]
 flate2 = "1.0"
-clap = { version = "3.0", features = ["derive"] }
+clap = { version = "4.5", features = ["derive"] }
 colored = "2.0"
 indicatif = "0.17"
